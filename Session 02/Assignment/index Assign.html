@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mini Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+   <!-- Navigation Bar  -->
+   <div class="container mt-3">
+    <h2>Benoit Picard</h2>
+		<br>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-bs-toggle="tab" href="#menu1">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#menu2">About us</a>
+    </li>
+  </ul>
+</div>
+  
+    <div class="container">
+        <h1 class="text-center my-4">Mini Dashboard</h1>
+        <!--Statistic Card -->  
+    <div class="row">
+        <div class="col-4">
+            <div class="card bg-info text-white mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Users</h5>
+                    <p class="card-text text-white">1,234</p>
+                    <p class="card-text"><small class="text-white">Date:June 12 2025</small></p>
+                </div>
+            </div>
+        </div>
+         <div class="col-4">
+            <div class="card bg-success text-white mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Revenue</h5>
+                    <p class="card-text">59,876</p>
+                    <p class="card-text"><small class="text-white">Date:June 12 2025</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card bg-secondary text-white mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Errors</h5>
+                    <p class="card-text">3 Today</p>
+                    <p class="card-text"><small class="text-white">Date:June 12 2025</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--Chart code -->
+    <div class="row">
+        <div class="col-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-black">User Growth Chart</h5>
+                    <img src="Image/Chart 01.jpeg" alt="" align="center" class="img-fluid">
+                </div>
+            </div>
+        </div>
+         <div class="col-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-black">User Growth Chart</h5>
+                    <img src="Image/Chart 02.jpeg" alt="" align="center" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--Table for User Data -->
+    <div class="row">
+        <h3>Recent Transactions</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Date</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>$100</td>
+                    <td><span class="badge bg-success">Completed</span></td>
+                    <td>June 12, 2025</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>$200</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    <td>June 12, 2025</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bob Johnson</td>
+                    <td>$300</td>
+                    <td><span class="badge bg-danger">Failed</span></td>
+                    <td>June 12, 2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <!--Form for User Feedback -->
+    <h3>Enter Your Name</h3>
+    <br>
+    <div class="row">
+        <div class="col-8">
+        <input type="text" name="" id="userName" placeholder="Enter your name" class="form-control mb-3"/></div>
+        <div class="col-2">
+        <button class="btn btn-primary" onclick="submitFeedback()">Submit</button>  </div>
+        <div class="col-2">
+            <button class="btn btn-secondary" onclick="clearFeedback()">Clear</button>
+        </div>
+        <div id="feedbackResult"></div>
+        <script>
+            function submitFeedback() {
+                let name = document.getElementById("userName").value;
+                document.getElementById("feedbackResult").innerHTML = "Thank you, " + name + "!";
+            }
+        </script>
+    </div>
+    <br><br><br>
+   
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" ></script>
+
+ <!--web footer code -->
+        <div>
+            <img src="Image/Picard Passport.jpeg" class="rounded-circle" alt="Cinque Terre" style="width: 40px; height: 40px;"> 
+            Copyright © 2025 Benoit Picard Dushimimana
+        </div>
+        
+
+</body>
+</html>
