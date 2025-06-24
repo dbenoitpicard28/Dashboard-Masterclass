@@ -4,5 +4,5 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("Hello, world!")
 
-def introduction(request):
-    return HttpResponse("This is the introduction")
+def home(request):
+    return HttpResponse("This is the Home Page")
