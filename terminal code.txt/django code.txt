@@ -1,0 +1,20 @@
+pip install django \ # to install django    
+
+django --version \ # to check version of django
+show django \ # to show which pyhon has access of django 
+
+django-admin startproject dashboard \ # to start project named dashboard
+
+ls \# list of directory 
+cd dashboard    \ # change to directory dashboard
+
+python manage.py startapp main  \ # to start & create app
+
+python manaage.py runserver \ # to run server 
+
+python -m venv venv     \ #to create virtual environment 
+
+source venv/bin/activate    \ # to activate virtual environment
+
+
+

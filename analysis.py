@@ -160,3 +160,25 @@ data.isna().sum()  # Display the number of missing values in each column
 
 slice_1 = data.iloc[0:5, 0:3]  # Slicing the dataframe to get the first 5 rows and first 3 columns
 print(slice_1)  # Display the sliced dataframe
+
+print(data.columns)  # Display the columns of the dataframe
+print(data.smartphone_owner)  # Display the "smartphone_owner" column
+print(data["gender"].head())  # Display the first 5 rows of the "gender" column
+print(data["gender"].unique())  # Display the unique values in the "gender" column
+
+# slicing
+nb_Male = len(data[data.gender.str.lower() == "male"])
+nb_Female = len(data[data.gender.str.lower() == "female"])
+nb_both_sex=nb_Male+nb_Female
+print(f"Male: {nb_Male}\nFemale: {nb_Female}\nBoth sexes: {nb_both_sex}")
+
+print(data["education_level"].unique())  # Display the unique values in the "education" column
+
+data.education_level = data.education_level.fillna("Not educated")  # Fill missing values in the "education" column with "Not educated
+print(data.education_level.unique())  # Display the unique values in the "education" column after filling missing values
+
+education_level=data.groupby("education_level").agg(
+    nb=("education_level", "count"),
+    avr_income=("monthly_income_rwf", "mean"),
+).reset_index()
+print(education_level)  # Display the grouped dataframe by "education_level"

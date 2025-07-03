@@ -1,0 +1,8 @@
+
+show databases;\  # to check databases
+use vonsungc_sakila;\ # use this to select databases called "vonsungc_sakila"
+show tables;\ # use this to show tables available in database
+
+select * from customer limit 6; \  #select all row data in tables but only 6 row 
+
+select staff.first_name, staff.last_name, address.address, address.district from staff left join address on staff.address_id=address.address_id; \ #we use this to joint tables and get usefull information
